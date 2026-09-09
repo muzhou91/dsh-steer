@@ -1,8 +1,24 @@
 # dsh-steer
 
+Personal runtime plugin practice for DeepSeek Harness (dsh) v0.1 developer preview, built on top of its Cordis plugin microkernel.This plugin here was writtenwith dsh itself— a vibe-coding / dogfooding exercise by a product manager learning the harness from the inside.
+Status:independent, personal-use plugins. 
+They arenotmerged intodeepseek-ai/deepseek-harness. Targeted at the v0.1 preview.
+
+## Why I built it
+dsh's defining idea is "everything is a plugin": model providers, tools, skills, sessions, sandbox, storage, the agent loop and even the entire UI are Cordis plugins. The fastest way to understand an agent runtime is not to read about it, but to extend it — so within the first week of the preview I rebuilt tiny plugin while using the product every day.
+
+The work answered two questions for me:
+What is the minimal contract a plugin must satisfy to load, declare dependencies and unload cleanly?
+How can a user intervene while the agent is still running, instead of watching a long task burn tokens down the wrong path? → the steer-composer plugin.
+
 A **steer button** for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH).
 
-While the agent is running, a **⏩ button** appears at the right end of the composer. Type a message and click it to **inject the message into the current turn** ("steer") instead of queuing it for after the turn — handy for adding guidance mid-task without waiting or interrupting.
+While the agent is running, a **⏩ button** appears at the right end of the composer. Type a message and click it to **inject the message into the current turn** ("steer") instead of queuing it for after the turn — handy for adding guidance mid-task without waiting or interrupting. The agent merges the live trajectory of the current task with the new instruction and re-plans in place, without aborting and restarting. Prevents wasted tokens/time when a run starts drifting.
+
+dsh-steer touches two layers: a UI affordance (steer button available during runs) and the agent loop / context path (new instruction is merged into the current turn's context rather than queued as a separate, context-free chat message).
+
+## The Steer problem, in one paragraph
+Long agent runs are expensive and sticky: once the model commits to a wrong plan, it can spend minutes and many tokens before you can tell it anything. The usual options are bad — wait and pay, or kill the run and lose context. Steering inserts a lightweight channel into the running loop: a user message becomes the highest-priority context at the next decision point, the model reconciles it with what it has already done (its trajectory), and execution continues. It is the human-in-the-loop control that "autonomous" agents still need.
 
 ## Requirements
 
