@@ -1,8 +1,8 @@
 # dsh-steer
 
-Personal runtime plugin practice for DeepSeek Harness (dsh) v0.1 developer preview, built on top of its Cordis plugin microkernel.This plugin here was writtenwith dsh itself— a vibe-coding / dogfooding exercise by a product manager learning the harness from the inside.
+Personal runtime plugin practice for DeepSeek Harness (dsh) v0.1 developer preview, built on top of its Cordis plugin microkernel.This plugin here was writtenwith dsh itself— a vibe-coding practice by a product manager learning the AI harness from the inside.
 Status:independent, personal-use plugins. 
-They arenotmerged intodeepseek-ai/deepseek-harness. Targeted at the v0.1 preview.
+They are not merged intodeepseek-ai/deepseek-harness. Targeted at the v0.1 preview.
 
 ## Why I built it
 dsh's defining idea is "everything is a plugin": model providers, tools, skills, sessions, sandbox, storage, the agent loop and even the entire UI are Cordis plugins. The fastest way to understand an agent runtime is not to read about it, but to extend it — so within the first week of the preview I rebuilt tiny plugin while using the product every day.
