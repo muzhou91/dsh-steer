@@ -1,0 +1,39 @@
+{
+  "name": "dsh-steer",
+  "version": "1.0.0",
+  "description": "Steer button for DeepSeek Harness (DSH): a composer control that injects your typed message into the running turn instead of queueing it.",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "scripts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "install:dsh": "node scripts/patch-submit-steer.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "steer",
+    "composer"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web"
+    }
+  }
+}
