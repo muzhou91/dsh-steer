@@ -8,8 +8,11 @@ They arenotmerged intodeepseek-ai/deepseek-harness. Targeted at the v0.1 preview
 dsh's defining idea is "everything is a plugin": model providers, tools, skills, sessions, sandbox, storage, the agent loop and even the entire UI are Cordis plugins. The fastest way to understand an agent runtime is not to read about it, but to extend it — so within the first week of the preview I rebuilt tiny plugin while using the product every day.
 
 The work answered two questions for me:
+
 What is the minimal contract a plugin must satisfy to load, declare dependencies and unload cleanly?
 How can a user intervene while the agent is still running, instead of watching a long task burn tokens down the wrong path? → the steer-composer plugin.
+
+## What is dsh-steer
 
 A **steer button** for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH).
 
@@ -17,7 +20,8 @@ While the agent is running, a **⏩ button** appears at the right end of the com
 
 dsh-steer touches two layers: a UI affordance (steer button available during runs) and the agent loop / context path (new instruction is merged into the current turn's context rather than queued as a separate, context-free chat message).
 
-## The Steer problem, in one paragraph
+The Steer problem, in one paragraph
+
 Long agent runs are expensive and sticky: once the model commits to a wrong plan, it can spend minutes and many tokens before you can tell it anything. The usual options are bad — wait and pay, or kill the run and lose context. Steering inserts a lightweight channel into the running loop: a user message becomes the highest-priority context at the next decision point, the model reconciles it with what it has already done (its trajectory), and execution continues. It is the human-in-the-loop control that "autonomous" agents still need.
 
 ## Requirements
