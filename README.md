@@ -119,11 +119,8 @@ Upgrades restore the stock core bundle, so: re-run `npm run install:dsh` and har
 | `lib/index.js` | Host half: inert plugin row for the Cordis loader |
 | `scripts/patch-submit-steer.mjs` | Version-tolerant, idempotent core patch |
 
-## Design notes & further reading
-
-- Write-up: *Steering an Agent Mid-Run* (design space: abort / queue / in-place inject / trajectory fork) — `【link to your post】`
-- DSH repo: https://github.com/deepseek-ai/deepseek-harness (Cordis microkernel, append-only Trajectory)
-- Community discussion on harness-level feedback/memory: Discussion #3426
+## Release
+- developed against 0.1.2-rc.1 /patch verified on 0.1.5-rc.1
 
 Issues and design feedback welcome — especially on mid-run steering semantics across harnesses.
 
