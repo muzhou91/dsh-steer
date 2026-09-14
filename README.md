@@ -4,11 +4,12 @@ A one-click **⏩ Steer button** for [DeepSeek Harness](https://github.com/deeps
 
 While the agent is running, a ⏩ button appears at the right end of the composer (`conversation.input.right` slot). Type guidance and click it to **steer the current turn** — inject your message into the run that is already in flight instead of waiting for it to finish or queueing behind it.
 
-> Personal, independent plugin practice on the DSH v0.1 developer preview. Built **with dsh itself** (vibe-coded by a product manager learning the harness from inside). Not merged into `deepseek-ai/deepseek-harness`; targets preview APIs that may change.
+> Personal
+It's an independent plugin practice on the DSH v0.1 developer preview. Built **with dsh itself** (vibe-coded by a product manager learning the harness from inside). Not merged into `deepseek-ai/deepseek-harness`; targets preview APIs that may change.
 
 ## Why
 
-Long agent runs are expensive and *sticky*: once the model commits to a wrong plan, it can spend minutes and many tokens before you can say anything. The usual options are both bad — wait and pay, or stop and lose context.
+Long agent runs are expensive and *sticky*: once the model commits to a wrong plan, it can spend minutes and many tokens before you can say anything. The usual options are both not so good — wait and pay, or stop and lose context.
 
 DSH's input layer already understands two **delivery modes** — `queue` (default) and `steer` — but early previews (I started on `0.1.2-rc.1`) only exposed `queue` in the UI. dsh-steer surfaces the hidden `steer` mode as a single button, and answers two questions I cared about:
 
