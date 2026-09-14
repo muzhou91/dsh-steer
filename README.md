@@ -10,6 +10,7 @@ A one-click **⏩ Steer button** for [DeepSeek Harness](https://github.com/deeps
 While the agent is running, a ⏩ button appears at the right end of the composer (`conversation.input.right` slot). Type guidance and click it to **steer the current turn** — inject your message into the run that is already in flight instead of waiting for it to finish or queueing behind it.
 
 > Personal
+
 It's an independent plugin practice on the DSH v0.1 developer preview. Built **with dsh itself** (vibe-coded by a product manager learning the harness from inside). Not merged into `deepseek-ai/deepseek-harness`; targets preview APIs that may change.
 
 ## Why
