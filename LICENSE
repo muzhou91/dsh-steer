@@ -1,6 +1,16 @@
 MIT License
 
-Copyright (c) 2026 dsh-steer contributors
+dsh-steer is licensed under the MIT License.
+
+Copyright (c) 2026 Joel Feng
+
+This license applies to the original code in this repository.
+DeepSeek Harness, its source code, binaries, APIs, trademarks, and other
+third-party components are not covered by this license and remain subject
+to their respective licenses and terms.
+
+dsh-steer is an independent community project and is not affiliated with
+or endorsed by DeepSeek.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
