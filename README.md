@@ -1,3 +1,6 @@
+<img width="854" height="96" alt="dsh-steer button" src="https://github.com/user-attachments/assets/56fea569-096e-4afe-92f0-17f25b321e69" />
+
+
 # dsh-steer
 
 A one-click **⏩ Steer button** for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH).
