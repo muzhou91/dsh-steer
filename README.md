@@ -5,11 +5,6 @@
 </p>
 
 
-<p align="center">
-<img width="960" height="490" alt="录制于2026-09-15_16 54 29_960x490" src="https://github.com/user-attachments/assets/878e401f-3369-4d43-b2da-fdfb138718a4" />
-</p>
-Demo
-
 A one-click **⏩ Steer button** for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH).
 
 While the agent is running, a ⏩ button appears at the right end of the composer (`conversation.input.right` slot). Type guidance and click it to **steer the current turn** — inject your message into the run that is already in flight instead of waiting for it to finish or queueing behind it.
@@ -135,6 +130,11 @@ Upgrades restore the stock core bundle, so: re-run `npm run install:dsh` and har
 - developed against 0.1.2-rc.1 /patch verified on 0.1.5-rc.1
 
 Issues and design feedback welcome — especially on mid-run steering semantics across harnesses.
+
+## Demo Only
+<p align="center">
+<img width="960" height="490" alt="录制于2026-09-15_16 54 29_960x490" src="https://github.com/user-attachments/assets/878e401f-3369-4d43-b2da-fdfb138718a4" />
+</p>
 
 ## License
 
