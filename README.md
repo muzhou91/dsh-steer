@@ -54,7 +54,7 @@ Two small pieces:
    > Note: by design this edits an installed DSH **core bundle** (the capability isn't reachable from a plugin alone). A DSH upgrade overwrites that bundle — just re-run the patch.
 2. **A client plugin** (`lib/client.js`) that registers the ⏩ control into the `conversation.input.right` seat and shows it only while a session is running. `lib/index.js` is the intentionally inert host half that gives the Cordis loader a plugin row to mount so the browser bundle is served.
 
-## Install
+## Install（Please use official Queue/Steer + `Cmd/Ctrl+Enter`）
 
 ### 1) Patch the core (one time)
 
